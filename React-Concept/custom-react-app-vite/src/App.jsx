@@ -18,7 +18,7 @@ function App() {
   // ];
   return (
     <>
-      <h1 className="text-center bg-green-500">Hello Tailwind css</h1>
+      {/* <h1 className="text-center bg-green-500">Hello Tailwind css</h1> */}
       <BackgroundColorChange />
       {/* <Header /> */}
       {/* <Counter /> */}
