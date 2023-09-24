@@ -1,5 +1,7 @@
 import "./App.css";
-import BackgroundColorChange from "./components/BgChanger";
+import PasswordGen from "./components/PasswordGen";
+
+// import BackgroundColorChange from "./components/BgChanger";
 // import Card from "./components/Card";
 // import Counter from "./components/Counter";
 // import Header from "./components/Header";
@@ -19,10 +21,11 @@ function App() {
   return (
     <>
       {/* <h1 className="text-center bg-green-500">Hello Tailwind css</h1> */}
-      <BackgroundColorChange />
+      {/* <BackgroundColorChange /> */}
       {/* <Header /> */}
       {/* <Counter /> */}
       {/* <Card username="Aravind" simpleObj={someObject} simpleArr = {someArry}  /> */}
+      <PasswordGen />
     </>
   );
 }
