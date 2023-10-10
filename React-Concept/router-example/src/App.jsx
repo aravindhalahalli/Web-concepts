@@ -6,6 +6,7 @@ import About from './components/About/About'
 import Contact from './components/Contacts/Contacts'
 import User from './components/User/User'
 import Github, { githubInfoLoader } from './components/Github/Github'
+import Table from './components/Tables'
 
 function App() {
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="user/:userid" element={<User />} />
+        <Route path="table" element={<Table />} />
         <Route loader={githubInfoLoader} path="github" element={<Github />} />
       </Route>
     )
