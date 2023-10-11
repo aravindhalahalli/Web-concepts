@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  /* base  font and color  */
+  html {
+    @apply text-zbbase;
+  }
+
+  /* main heading */
+  h3 {
+    @apply text-zbgray-500 font-normal text-zbbase !important;
+  }
+
+  /* page description */
+  h1 {
+    @apply text-zblg font-bold !important;
+  }
+
+  /* active heading */
+  h2 {
+    @apply text-zbblack font-semibold text-zbbase !important;
+  }
+
+  [type='checkbox']:checked,
+  [type='radio']:checked {
+    @apply bg-secondary-700 focus:border-secondary-700 !important;
+  }
+
+}
+
+@layer components {
+  .table-css {
+    @apply min-w-full divide-y divide-gray-200 border-separate border-spacing-0 text-zbblack text-zbbase;
+  }
+  .table-thead-css {
+    @apply text-zbbase font-bold whitespace-nowrap py-3.5 pl-4 pr-3 text-left sm:pl-6 sticky top-0 uppercase border-y border-zbgray-200 bg-zbgray-500 text-ellipsis overflow-hidden z-[5];
+  }
+
+}
+
+
+
+@font-face {
+  font-family: "nexa";
+  src: url("./assets/fonts/NexaText-Regular.otf");
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+}
+
+label {
+  font-size: 0.875rem;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+#tooltip[data-popper-placement^='top']>#arrow {
+  bottom: -6px;
+}
+
+#tooltip[data-popper-placement^='top']>#arrow::before {
+  border-bottom: 2px solid #e5e7eb;
+  border-right: 2px solid #e5e7eb;
+}
+
+
+#tooltip[data-popper-placement^='bottom']>#arrow {
+  top: -6px;
+}
+
+#tooltip[data-popper-placement^='bottom']>#arrow::before {
+  border-top: 2px solid #e5e7eb;
+  border-left: 2px solid #e5e7eb;
+}
+
+
+#tooltip[data-popper-placement^='left']>#arrow {
+  right: -5px;
+}
+
+#tooltip[data-popper-placement^='right']>#arrow {
+  left: -5px;
+}
